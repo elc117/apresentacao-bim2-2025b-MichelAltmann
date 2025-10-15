@@ -28,10 +28,6 @@ public class Main {
                 // Salve o card
                 generator.saveCard(outputDir, a.getName(), card);
             }
-            Color[] c = ColorUtil.generateTriadColor(new Color(255, 0, 0));
-            for (int i = 0; i < c.length; i++) {
-                System.out.println(c[i]);
-            }
             System.out.println("Cartões gerados em: " + outputDir.toAbsolutePath());
         } catch (Exception e) {
             e.printStackTrace();

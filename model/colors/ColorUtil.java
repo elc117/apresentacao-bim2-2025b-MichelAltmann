@@ -25,8 +25,23 @@ public class ColorUtil {
 
     }
 
+    public static float[] getHSB(Color c) {
+        return Color.RGBtoHSB(c.getRed(), c.getGreen(), c.getBlue(), null);
+    }
+
+    public static Color getComplementary(Color c) {
+        float[] hsbColor = getHSB(c);
+        float hue = hsbColor[0];
+        float saturation = hsbColor[1];
+        float brightness = hsbColor[2];
+
+        float comp = (hue + 1f/2f) % 1f;
+        int complementary = Color.HSBtoRGB(comp, saturation, brightness*1.2f);
+        return new Color(complementary);
+    }
+
     public static Color[] generateTriadColor(Color c) {
-        float[] hsbColor = Color.RGBtoHSB(c.getRed(), c.getGreen(), c.getBlue(), null);
+        float[] hsbColor = getHSB(c);
         float hue = hsbColor[0];
         float saturation = hsbColor[1];
         float brightness = hsbColor[2];
@@ -41,7 +56,11 @@ public class ColorUtil {
         int tertiary = Color.HSBtoRGB(t, saturation, brightness);
 
 
-        return new Color[]{new Color(primary), new Color(secondary), new Color(tertiary), Color.BLACK};
+        Color[] colors = new Color[]{new Color(primary), new Color(secondary), new Color(tertiary)};
+
+        System.out.println(colors[0] + ",  " + colors[1] + ", " + colors[2]);
+
+        return colors;
     }
 
     public static String toHex(Color color) {

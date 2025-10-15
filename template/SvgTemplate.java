@@ -5,6 +5,7 @@ import model.colors.TemplateColors;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Random;
 
 public class SvgTemplate {
 
@@ -16,10 +17,25 @@ public class SvgTemplate {
         this.svgRef = svgRef;
     }
 
+    public static String randomIcon(){
+        String[] icons = {
+                "award.svg",
+                "circle-star.svg",
+                "gem.svg",
+                "medal.svg",
+                "square-star.svg",
+                "star.svg",
+                "trophy.svg",
+                "trophy-hero.svg}"
+        };
+        Random rand = new Random();
+        return icons[rand.nextInt(icons.length-1)];
+    }
+
     public static SvgTemplate fromChoice(String choice, TemplateColors colors) {
         return switch (choice) {
-            case "azul" -> new SvgTemplate(colors, "assets/circle-star.svg");
-            default -> new SvgTemplate(colors, "assets/gem.svg");
+            case "azul" -> new SvgTemplate(colors, "assets/"+randomIcon());
+            default -> new SvgTemplate(colors, "assets/"+randomIcon());
         };
     }
 
@@ -31,8 +47,8 @@ public class SvgTemplate {
             iconContent = "<!-- could not load icon -->";
         }
         double scale = 16.0;
-        double x = 348;
-        double y = 540;
+        double x = 350;
+        double y = 534;
         return String.format("""
                 <svg xmlns='http://www.w3.org/2000/svg' width='1080' height='1350' viewBox='0 0 1080 1350'>
                   <defs>
@@ -45,9 +61,9 @@ public class SvgTemplate {
                       <stop offset='100%%' stop-color='%s'/>
                     </linearGradient>
                     <style>
-                      .title { font: 800 96px system-ui, sans-serif; fill: #F8FAFC; }
-                      .name  { font: 800 56px system-ui, sans-serif; fill: #F8FAFC; }
-                      .desc  { font: 600 44px system-ui, sans-serif; fill: #CBD5E1; }
+                      .title { font: 800 96px system-ui, sans-serif; fill: %s; }
+                      .name  { font: 800 56px system-ui, sans-serif; fill: %s; }
+                      .desc  { font: 600 44px system-ui, sans-serif; fill: %s; }
                     </style>
                   </defs>
                 
@@ -61,6 +77,6 @@ public class SvgTemplate {
                   <text class='name' x='540' y='1100' text-anchor='middle'>%s</text>
                   <text class='desc' x='540' y='1170' text-anchor='middle'>%s</text>
                 </svg>
-                """, colors.getPrimary(), colors.getSecondary(), colors.getTertiary(), colors.getAccent(), title1, title2, x, y, scale, iconContent, name, reason);
+                """, colors.getAccent1(), colors.getAccent2(), colors.getPrimary(), colors.getSecondary(), colors.getTextTop(), colors.getTextBottom(), colors.getTextBottom(), title1, title2, x, y, scale, iconContent, name, reason);
     }
 }
