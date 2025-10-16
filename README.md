@@ -107,7 +107,7 @@ https://github.com/user-attachments/assets/699c01f7-4bd4-4884-99dd-7f1c020bb7bd
 
 ## Diagrama de Classes
 
-<img width="1289" height="724" alt="Screenshot 2025-10-15 at 21 43 11" src="https://github.com/user-attachments/assets/2c04cc56-a00c-44d5-a0d8-f66127e058bb" />
+<img width="1356" height="681" alt="image" src="https://github.com/user-attachments/assets/b42a3f45-d1ce-4142-8ced-f5e4848864f5" />
 
 ## Referências
 
