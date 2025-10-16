@@ -89,9 +89,9 @@ pois hue ou matiz em português, é o valor necessario para fazer o cálculo dar
 
 ## Alguns cards gerados
 
-| ![Felipe.svg](cards/Felipe.svg)                | ![Gabriela.svg](cards/Gabriela.svg) |
+|<img width="694" height="868" alt="image" src="https://github.com/user-attachments/assets/1f774854-78f2-45ff-9e03-683f61db6210" />|<img width="694" height="868" alt="image" src="https://github.com/user-attachments/assets/6af2de1a-4dac-4baa-b149-4b50c978cfb1" />
 |------------------------------------------------|-------------------------------------|
-| ![João_Carlos.svg](cards/Jo%C3%A3o_Carlos.svg) | ![Carla.svg](cards/Carla.svg)       |
+|<img width="684" height="856" alt="image" src="https://github.com/user-attachments/assets/af687120-16ee-48bd-9b66-3d3338edb0ad" />| <img width="684" height="856" alt="image" src="https://github.com/user-attachments/assets/8da83094-ae34-4e04-b84a-855ae4d7a6b0" />|
 
 
 ## Pontos difíceis e fáceis
@@ -102,3 +102,16 @@ pois hue ou matiz em português, é o valor necessario para fazer o cálculo dar
 | Editar a `Main` para funcionar com o resto | Fazer os ícones funcionarem no svg    |
 
 ## Código Rodando
+
+
+https://github.com/user-attachments/assets/699c01f7-4bd4-4884-99dd-7f1c020bb7bd
+
+## Referências
+
+- https://customstickers.com/community/blog/how-to-calculate-complementary-triadic-and-tetradic-colors-from-a-hex-code?srsltid=AfmBOopFMCzjUfUNDb4tqRaeQJgdkMCQJejoqCI3sWNHstuvRz0SqLTg
+- https://stackoverflow.com/questions/3607858/convert-a-rgb-color-value-to-a-hexadecimal-string
+- https://stackoverflow.com/questions/43044/algorithm-to-randomly-generate-an-aesthetically-pleasing-color-palette
+- https://www.sessions.edu/color-calculator/
+- https://en.wikipedia.org/wiki/Color_theory
+- https://en.wikipedia.org/wiki/Complementary_colors
+- https://pt.wikipedia.org/wiki/C%C3%ADrculo_crom%C3%A1tico
