@@ -103,8 +103,11 @@ pois hue ou matiz em português, é o valor necessario para fazer o cálculo dar
 
 ## Código Rodando
 
-
 https://github.com/user-attachments/assets/699c01f7-4bd4-4884-99dd-7f1c020bb7bd
+
+## Diagrama de Classes
+
+<img width="1356" height="681" alt="image" src="https://github.com/user-attachments/assets/b42a3f45-d1ce-4142-8ced-f5e4848864f5" />
 
 ## Referências
 
