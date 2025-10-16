@@ -3,7 +3,7 @@ package model.colors;
 import java.awt.*;
 import java.util.Random;
 
-public class ColorUtil {
+public class ColorUtils {
     public static Color generateRandomColor() {
         Random rand = new Random();
         int r = rand.nextInt(255);
@@ -55,12 +55,7 @@ public class ColorUtil {
         int secondary = Color.HSBtoRGB(s, saturation, brightness);
         int tertiary = Color.HSBtoRGB(t, saturation, brightness);
 
-
-        Color[] colors = new Color[]{new Color(primary), new Color(secondary), new Color(tertiary)};
-
-        System.out.println(colors[0] + ",  " + colors[1] + ", " + colors[2]);
-
-        return colors;
+        return new Color[]{new Color(primary), new Color(secondary), new Color(tertiary)};
     }
 
     public static String toHex(Color color) {

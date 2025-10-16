@@ -32,11 +32,8 @@ public class SvgTemplate {
         return icons[rand.nextInt(icons.length-1)];
     }
 
-    public static SvgTemplate fromChoice(String choice, TemplateColors colors) {
-        return switch (choice) {
-            case "azul" -> new SvgTemplate(colors, "assets/"+randomIcon());
-            default -> new SvgTemplate(colors, "assets/"+randomIcon());
-        };
+    public static SvgTemplate fromChoice(TemplateColors colors) {
+        return new SvgTemplate(colors, "assets/"+randomIcon());
     }
 
     public String render(String title1, String title2, String name, String reason) {
